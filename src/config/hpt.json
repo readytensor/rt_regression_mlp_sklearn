@@ -1,0 +1,31 @@
+{
+  "num_trials": 20,
+  "hyperparameters": [
+    {
+      "name": "hidden_layer_size",
+      "short_desc": "Number of neurons in the single hidden layer.",
+      "type": "int",
+      "search_type": "uniform",
+      "range_low": 5,
+      "range_high": 150
+    },
+    {
+      "name": "activation",
+      "short_desc": "Activation function for the hidden layer.",
+      "type": "categorical",
+      "categories": ["relu", "tanh", "logistic", "identity"]
+    },
+    {
+      "name": "solver",
+      "short_desc": "The solver for weight optimization.",
+      "type": "categorical",
+      "categories": ["adam", "sgd", "lbfgs"]
+    },
+    {
+      "name": "learning_rate",
+      "short_desc": "Learning rate schedule for weight updates.",
+      "type": "categorical",
+      "categories": ["constant", "invscaling", "adaptive"]
+    }
+  ]
+}
